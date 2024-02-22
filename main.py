@@ -8,3 +8,6 @@ p1.deposit(500)
 
 p2.get_balance()
 p2.deposit(200)
+
+p1.withdaraw(3000)
+p1.withdaraw(100)
