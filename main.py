@@ -11,3 +11,6 @@ p2.deposit(200)
 
 p1.withdaraw(3000)
 p1.withdaraw(100)
+
+p1.transfer(200, p2)
+p1.transfer(5000, p2)

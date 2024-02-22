@@ -21,7 +21,7 @@ class BankAccount:
         if self.balance >= amount:
             return
         else:
-            raise BalanceException(f"\nSorry, account '{self.name}' only has a balance of ${self.balance:.2f}")
+            raise BalanceException(f"\nSorry, account '{self.name}' only has a balance of ${self.balance:.2f}\n")
 
     def withdaraw(self, amount):
         try:
@@ -31,6 +31,20 @@ class BankAccount:
             self.get_balance()
         except BalanceException as error:
             print(f"Withdraw interrupted:{error}")
+
+    def transfer(self, amount, account):
+        try:
+            print("******************\n\nBeginning Transfer .. 🚀")
+            self.viableTransaction(amount)
+            self.withdaraw(amount)
+            account.deposit(amount)
+            print("Transfer complete .. ✅\n\n******************\n\n")
+        except BalanceException as error:
+            print(f"Transfer interrupted. ❌\n{error}")
+
+
+
+        
 
         
         
