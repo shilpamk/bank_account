@@ -14,3 +14,9 @@ p1.withdaraw(100)
 
 p1.transfer(200, p2)
 p1.transfer(5000, p2)
+
+p3 = InterestRewardAcct(1000, "Jim")
+p3.deposit(100)
+
+p3.transfer(500, p2)
+p3.get_balance()

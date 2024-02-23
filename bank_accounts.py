@@ -43,6 +43,21 @@ class BankAccount:
             print(f"Transfer interrupted. ❌\n{error}")
 
 
+class InterestRewardAcct(BankAccount):
+    def deposit(self, amount):
+        '''
+         We are going to overwrite the deposite account.
+         Any account with rewardaccount will get 5% interset for every deposit. 
+        '''
+        self.balance = self.balance + (amount * 1.05)
+        print("Deposit complete.")
+        self.get_balance()
+        
+        
+        
+
+
+
 
         
 
