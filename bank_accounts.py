@@ -52,6 +52,25 @@ class InterestRewardAcct(BankAccount):
         self.balance = self.balance + (amount * 1.05)
         print("Deposit complete.")
         self.get_balance()
+
+
+class SavingsAcct(InterestRewardAcct):
+    """
+        Any withdrwal from this account deducts a fee from this account balance
+    """
+    def __init__(self, initialAmount, acctName):
+        super().__init__(initialAmount, acctName)
+        self.fee = 5    # deduct $5 for every withdraw
+        
+    # Override the withdraw method from parent class
+    def withdaraw(self, amount):
+        try:
+            self.viableTransaction(amount + self.fee)
+            self.balance = self.balance - (amount + self.fee)
+            print("Withdraw completed.")
+            self.get_balance()
+        except BalanceException as error:
+            print(f"\nWithdraw interrupted. {error}")
         
         
         

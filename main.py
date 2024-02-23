@@ -20,3 +20,9 @@ p3.deposit(100)
 
 p3.transfer(500, p2)
 p3.get_balance()
+
+
+p4 = SavingsAcct(1000, "Suman")
+p4.deposit(100)
+p4.transfer(10000, 'Shilpa')
+p4.transfer(1000, p1)
